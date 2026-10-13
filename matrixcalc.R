@@ -1,0 +1,6 @@
+m1 <- matrix(c(2, 3, 4, 1), nrow = 2, byrow = TRUE)
+m2 <- matrix(c(3, 2, 2, 1), nrow = 2, byrow = TRUE)
+cat("\n Matrix addition:\n"); print(m1 + m2)
+cat("\n Matrix transpose:\n"); print(t(m1))
+cat("\n Matrix inverse:\n"); print(solve(m1))
+cat("\n Matrix multiplication:\n"); print(m1 %*% m2)

@@ -1,0 +1,5 @@
+library(ggplot2); data("faithful")
+linear_model <- lm(waiting ~ eruptions, data = faithful)
+summary(linear_model)
+plot(faithful$eruptions, faithful$waiting, xlab = "Eruption Duration(mins)", ylab = "Waiting time (mins)", main = "Faithful Geyser: Waiting Time vs. Eruption Duration")
+abline(linear_model, col = "red", lwd = 2)

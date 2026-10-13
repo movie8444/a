@@ -1,0 +1,5 @@
+library(datasets); data(HairEyeColor)
+contingency_table <- margin.table(HairEyeColor, c("Hair", "Eye"))
+print(contingency_table)
+chi_square_test <- chisq.test(contingency_table)
+print(chi_square_test)

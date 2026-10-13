@@ -1,0 +1,7 @@
+model <- lm(mpg ~ wt, data = mtcars)
+summary_model <- summary(model)
+print(paste("R-Squared: ", summary_model$r.squared))
+print(paste("Adjusted R-Squared: ", summary_model$adj.r.squared))
+print(paste("Residual Standard Error: ", summary_model$sigma))
+new_observation <- data.frame(wt = 3)
+print(paste("Predicted MPG: ", predict(model, newdata = new_observation)))

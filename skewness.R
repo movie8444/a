@@ -1,0 +1,7 @@
+library(moments)
+student <- read.csv("student.csv")
+cat("Skewness of Age =", skewness(student$Age), "\n")
+cat("Skewness of CGPA =", skewness(student$CGPA), "\n")
+par(mfrow = c(1, 2))
+hist(student$Age, main = "Age Distribution", xlab = "Age")
+hist(student$CGPA, main = "CGPA Distribution", xlab = "CGPA")

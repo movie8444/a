@@ -1,0 +1,6 @@
+library(ggplot2); data(mtcars)
+linear_model <- lm(mpg ~ hp + cyl + disp + wt, data = mtcars)
+summary(linear_model)
+predicted_mpg <- predict(linear_model)
+plot(mtcars$mpg, predicted_mpg, main = "Actual vs Predicted MPG", xlab = "Actual MPG", ylab = "Predicted MPG", pch = 19, col = "blue")
+abline(0, 1, col = "red", lwd = 2)

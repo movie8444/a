@@ -1,0 +1,6 @@
+library(ggplot2)
+x = c(1, 2, 3, 4, 5); y = c(1, 5, 8, 15, 26)
+df <- data.frame(x, y)
+linear_model <- lm(y ~ x^2, data = df)
+summary(linear_model)
+plot(x, y)

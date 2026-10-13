@@ -1,0 +1,5 @@
+string = readline("Enter a string: ")
+cat("Upper case: ", toupper(string))
+cat("\nLower case: ", tolower(string))
+library(tools)
+cat("\nTitle case: ", toTitleCase(string))

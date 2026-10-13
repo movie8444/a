@@ -1,0 +1,6 @@
+library(datasets); data("mtcars")
+mtcars$mpg_cat <- cut(mtcars$mpg, breaks = c(0, 20, 30, Inf), labels = c("Low", "Medium", "High"), right = FALSE)
+contingency_table <- table(mtcars$cyl, mtcars$mpg_cat)
+print(contingency_table)
+chisq_test_result = chisq.test(contingency_table)
+print(chisq_test_result)
